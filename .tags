@@ -1,0 +1,117 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+_BATCH_NORM_DECAY	deeplab_model.py	/^_BATCH_NORM_DECAY = 0.9997$/;"	v	line:17
+_BATCH_NORM_DECAY	train.py	/^_BATCH_NORM_DECAY = 0.9997$/;"	v	line:94
+_B_MEAN	utils/preprocessing.py	/^_B_MEAN = 103.94$/;"	v	line:9
+_DEPTH	train.py	/^_DEPTH = 3$/;"	v	line:86
+_G_MEAN	utils/preprocessing.py	/^_G_MEAN = 116.78$/;"	v	line:8
+_HEIGHT	train.py	/^_HEIGHT = 513$/;"	v	line:84
+_IGNORE_LABEL	train.py	/^_IGNORE_LABEL = 255$/;"	v	line:89
+_MAX_SCALE	train.py	/^_MAX_SCALE = 2.0$/;"	v	line:88
+_MIN_SCALE	train.py	/^_MIN_SCALE = 0.5$/;"	v	line:87
+_MOMENTUM	train.py	/^_MOMENTUM = 0.9$/;"	v	line:92
+_NUM_CLASSES	evaluate.py	/^_NUM_CLASSES = 21$/;"	v	line:44
+_NUM_CLASSES	export_inference_graph.py	/^_NUM_CLASSES = 21$/;"	v	line:36
+_NUM_CLASSES	inference.py	/^_NUM_CLASSES = 21$/;"	v	line:49
+_NUM_CLASSES	train.py	/^_NUM_CLASSES = 21$/;"	v	line:83
+_NUM_IMAGES	train.py	/^_NUM_IMAGES = {$/;"	v	line:96
+_POWER	train.py	/^_POWER = 0.9$/;"	v	line:91
+_R_MEAN	utils/preprocessing.py	/^_R_MEAN = 123.68$/;"	v	line:7
+_WEIGHT_DECAY	deeplab_model.py	/^_WEIGHT_DECAY = 5e-4$/;"	v	line:18
+_WIDTH	train.py	/^_WIDTH = 513$/;"	v	line:85
+_parse_function	utils/preprocessing.py	/^  def _parse_function(filename, is_label):$/;"	f	line:226	function:eval_input_fn
+atrous_spatial_pyramid_pooling	deeplab_model.py	/^def atrous_spatial_pyramid_pooling(inputs, output_stride, batch_norm_decay, is_training, depth=256):$/;"	f	line:21
+bytes_feature	utils/dataset_util.py	/^def bytes_feature(value):$/;"	f	line:31
+bytes_list_feature	utils/dataset_util.py	/^def bytes_list_feature(value):$/;"	f	line:35
+choices	evaluate.py	/^                    choices=['resnet_v2_50', 'resnet_v2_101'],$/;"	v	line:37
+choices	evaluate.py	/^                    choices=[8, 16],$/;"	v	line:41
+choices	export_inference_graph.py	/^                    choices=['resnet_v2_50', 'resnet_v2_101'],$/;"	v	line:28
+choices	export_inference_graph.py	/^                    choices=[8, 16],$/;"	v	line:32
+choices	inference.py	/^                    choices=['resnet_v2_50', 'resnet_v2_101'],$/;"	v	line:39
+choices	inference.py	/^                    choices=[8, 16],$/;"	v	line:43
+choices	train.py	/^                    choices=['poly', 'piecewise'],$/;"	v	line:45
+choices	train.py	/^                    choices=['resnet_v2_50', 'resnet_v2_101'],$/;"	v	line:55
+choices	train.py	/^                    choices=[8, 16],$/;"	v	line:62
+compute_accuracy	evaluate.py	/^    def compute_accuracy(total_cm):$/;"	f	line:126	function:main
+compute_mean_iou	deeplab_model.py	/^  def compute_mean_iou(total_cm, name='mean_iou'):$/;"	f	line:274	function:deeplabv3_model_fn
+compute_mean_iou	evaluate.py	/^    def compute_mean_iou(total_cm):$/;"	f	line:93	function:main
+create_tf_record	create_pascal_tf_record.py	/^def create_tf_record(output_filename,$/;"	f	line:84
+decode_labels	utils/preprocessing.py	/^def decode_labels(mask, num_images=1, num_classes=21):$/;"	f	line:23
+deeplab_v3_generator	deeplab_model.py	/^def deeplab_v3_generator(num_classes,$/;"	f	line:69
+deeplabv3_model_fn	deeplab_model.py	/^def deeplabv3_model_fn(features, labels, mode, params):$/;"	f	line:144
+dict_to_tf_example	create_pascal_tf_record.py	/^def dict_to_tf_example(image_path,$/;"	f	line:38
+eval_input_fn	utils/preprocessing.py	/^def eval_input_fn(image_filenames, label_filenames=None, batch_size=1):$/;"	f	line:213
+float_list_feature	utils/dataset_util.py	/^def float_list_feature(value):$/;"	f	line:39
+get_filenames	train.py	/^def get_filenames(is_training, data_dir):$/;"	f	line:102
+help	create_pascal_tf_record.py	/^                    help='Path to the directory containing the PASCAL VOC data.')$/;"	v	line:20
+help	create_pascal_tf_record.py	/^                    help='Path to the directory to create TFRecords outputs.')$/;"	v	line:23
+help	create_pascal_tf_record.py	/^                    help='Path to the file listing the training data.')$/;"	v	line:26
+help	create_pascal_tf_record.py	/^                    help='Path to the file listing the validation data.')$/;"	v	line:29
+help	create_pascal_tf_record.py	/^                    help='The directory containing the augmented label data.')$/;"	v	line:35
+help	create_pascal_tf_record.py	/^                    help='The directory containing the image data.')$/;"	v	line:32
+help	evaluate.py	/^                    help="Base directory for the model. "$/;"	v	line:32
+help	evaluate.py	/^                    help='Output stride for DeepLab v3. Currently 8 or 16 is supported.')$/;"	v	line:42
+help	evaluate.py	/^                    help='Path to the file listing the evaluation images.')$/;"	v	line:29
+help	evaluate.py	/^                    help='The architecture of base Resnet building block.')$/;"	v	line:38
+help	evaluate.py	/^                    help='The directory containing the ground truth label data.')$/;"	v	line:26
+help	evaluate.py	/^                    help='The directory containing the image data.')$/;"	v	line:23
+help	export_inference_graph.py	/^                    help="Base directory for the model. "$/;"	v	line:20
+help	export_inference_graph.py	/^                    help='Output stride for DeepLab v3. Currently 8 or 16 is supported.')$/;"	v	line:33
+help	export_inference_graph.py	/^                    help='The architecture of base Resnet building block.')$/;"	v	line:29
+help	export_inference_graph.py	/^                    help='The directory where the exported SavedModel will be stored.')$/;"	v	line:25
+help	inference.py	/^                    help="Base directory for the model. "$/;"	v	line:34
+help	inference.py	/^                    help='Output stride for DeepLab v3. Currently 8 or 16 is supported.')$/;"	v	line:44
+help	inference.py	/^                    help='Path to the directory to generate the inference results')$/;"	v	line:28
+help	inference.py	/^                    help='Path to the file listing the inferring images.')$/;"	v	line:31
+help	inference.py	/^                    help='The architecture of base Resnet building block.')$/;"	v	line:40
+help	inference.py	/^                    help='The directory containing the image data.')$/;"	v	line:25
+help	inference.py	/^                    help='Whether to use debugger to track down bad values during training.')$/;"	v	line:47
+help	train.py	/^                    help='Base directory for the model.')$/;"	v	line:21
+help	train.py	/^                    help='End learning rate for the optimizer.')$/;"	v	line:72
+help	train.py	/^                    help='Freeze batch normalization parameters during the training.')$/;"	v	line:66
+help	train.py	/^                    help='Initial global step for controlling learning rate when fine-tuning model.')$/;"	v	line:75
+help	train.py	/^                    help='Initial learning rate for the optimizer.')$/;"	v	line:69
+help	train.py	/^                    help='Learning rate policy to optimize loss.')$/;"	v	line:46
+help	train.py	/^                    help='Max number of batch elements to generate for Tensorboard.')$/;"	v	line:39
+help	train.py	/^                    help='Number of examples per batch.')$/;"	v	line:42
+help	train.py	/^                    help='Number of maximum iteration used for "poly" learning rate policy.')$/;"	v	line:49
+help	train.py	/^                    help='Number of training epochs: '$/;"	v	line:27
+help	train.py	/^                    help='Output stride for DeepLab v3. Currently 8 or 16 is supported.')$/;"	v	line:63
+help	train.py	/^                    help='Path to the directory containing the PASCAL VOC data tf record.')$/;"	v	line:52
+help	train.py	/^                    help='Path to the pre-trained model checkpoint.')$/;"	v	line:59
+help	train.py	/^                    help='The architecture of base Resnet building block.')$/;"	v	line:56
+help	train.py	/^                    help='The number of training epochs to run between evaluations.')$/;"	v	line:36
+help	train.py	/^                    help='The weight decay to use for regularizing the model.')$/;"	v	line:78
+help	train.py	/^                    help='Whether to clean up the model directory if present.')$/;"	v	line:24
+help	train.py	/^                    help='Whether to use debugger to track down bad values during training.')$/;"	v	line:81
+input_fn	train.py	/^def input_fn(is_training, data_dir, batch_size, num_epochs=1):$/;"	f	line:176
+int64_feature	utils/dataset_util.py	/^def int64_feature(value):$/;"	f	line:23
+int64_list_feature	utils/dataset_util.py	/^def int64_list_feature(value):$/;"	f	line:27
+label_colours	utils/preprocessing.py	/^label_colours = [(0, 0, 0),  # 0=background$/;"	v	line:12
+main	create_pascal_tf_record.py	/^def main(unused_argv):$/;"	f	line:119
+main	evaluate.py	/^def main(unused_argv):$/;"	f	line:47
+main	export_inference_graph.py	/^def main(unused_argv):$/;"	f	line:39
+main	inference.py	/^def main(unused_argv):$/;"	f	line:52
+main	train.py	/^def main(unused_argv):$/;"	f	line:213
+make_initializable_iterator	utils/dataset_util.py	/^def make_initializable_iterator(dataset):$/;"	f	line:91
+mean_image_addition	utils/preprocessing.py	/^def mean_image_addition(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:49
+mean_image_subtraction	utils/preprocessing.py	/^def mean_image_subtraction(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:82
+model	deeplab_model.py	/^  def model(inputs, is_training):$/;"	f	line:109	function:deeplab_v3_generator
+parse_record	train.py	/^def parse_record(raw_record):$/;"	f	line:118
+parser	create_pascal_tf_record.py	/^parser = argparse.ArgumentParser()$/;"	v	line:17
+parser	evaluate.py	/^parser = argparse.ArgumentParser()$/;"	v	line:20
+parser	export_inference_graph.py	/^parser = argparse.ArgumentParser()$/;"	v	line:17
+parser	inference.py	/^parser = argparse.ArgumentParser()$/;"	v	line:22
+parser	train.py	/^parser = argparse.ArgumentParser()$/;"	v	line:18
+preprocess_image	train.py	/^def preprocess_image(image, label, is_training):$/;"	f	line:153
+random_crop_or_pad_image_and_label	utils/preprocessing.py	/^def random_crop_or_pad_image_and_label(image, label, crop_height, crop_width, ignore_label):$/;"	f	line:156
+random_flip_left_right_image_and_label	utils/preprocessing.py	/^def random_flip_left_right_image_and_label(image, label):$/;"	f	line:194
+random_rescale_image_and_label	utils/preprocessing.py	/^def random_rescale_image_and_label(image, label, min_scale, max_scale):$/;"	f	line:115
+read_dataset	utils/dataset_util.py	/^def read_dataset($/;"	f	line:108
+read_examples_list	utils/dataset_util.py	/^def read_examples_list(path):$/;"	f	line:43
+recursive_parse_xml_to_dict	utils/dataset_util.py	/^def recursive_parse_xml_to_dict(xml):$/;"	f	line:65
+serving_input_receiver_fn	export_inference_graph.py	/^  def serving_input_receiver_fn():$/;"	f	line:56	function:main

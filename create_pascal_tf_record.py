@@ -16,19 +16,19 @@ from utils import dataset_util
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--data_dir', type=str, default='./dataset/VOCdevkit/VOC2012',
+parser.add_argument('--data_dir', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal',
                     help='Path to the directory containing the PASCAL VOC data.')
 
-parser.add_argument('--output_path', type=str, default='./dataset',
+parser.add_argument('--output_path', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal/TFRecords',
                     help='Path to the directory to create TFRecords outputs.')
 
-parser.add_argument('--train_data_list', type=str, default='./dataset/train.txt',
+parser.add_argument('--train_data_list', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal/ImageSets/Main/train.txt',
                     help='Path to the file listing the training data.')
 
-parser.add_argument('--valid_data_list', type=str, default='./dataset/val.txt',
+parser.add_argument('--valid_data_list', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal/ImageSets/Main/val.txt',
                     help='Path to the file listing the validation data.')
 
-parser.add_argument('--image_data_dir', type=str, default='JPEGImages',
+parser.add_argument('--image_data_dir', type=str, default='Images',
                     help='The directory containing the image data.')
 
 parser.add_argument('--label_data_dir', type=str, default='SegmentationClassAug',
@@ -55,8 +55,8 @@ def dict_to_tf_example(image_path,
     encoded_jpg = fid.read()
   encoded_jpg_io = io.BytesIO(encoded_jpg)
   image = PIL.Image.open(encoded_jpg_io)
-  if image.format != 'JPEG':
-    raise ValueError('Image format not JPEG')
+  if image.format != 'PNG':
+    raise ValueError('Image format not PNG')
 
   with tf.gfile.GFile(label_path, 'rb') as fid:
     encoded_label = fid.read()
@@ -74,7 +74,7 @@ def dict_to_tf_example(image_path,
     'image/height': dataset_util.int64_feature(height),
     'image/width': dataset_util.int64_feature(width),
     'image/encoded': dataset_util.bytes_feature(encoded_jpg),
-    'image/format': dataset_util.bytes_feature('jpeg'.encode('utf8')),
+    'image/format': dataset_util.bytes_feature('png'.encode('utf8')),
     'label/encoded': dataset_util.bytes_feature(encoded_label),
     'label/format': dataset_util.bytes_feature('png'.encode('utf8')),
   }))
@@ -95,9 +95,9 @@ def create_tf_record(output_filename,
   """
   writer = tf.python_io.TFRecordWriter(output_filename)
   for idx, example in enumerate(examples):
-    if idx % 500 == 0:
+    if idx % 10 == 0:
       tf.logging.info('On image %d of %d', idx, len(examples))
-    image_path = os.path.join(image_dir, example + '.jpg')
+    image_path = os.path.join(image_dir, example + '.png')
     label_path = os.path.join(label_dir, example + '.png')
 
     if not os.path.exists(image_path):

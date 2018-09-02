@@ -17,7 +17,7 @@ import shutil
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--model_dir', type=str, default='./model',
+parser.add_argument('--model_dir', type=str, default='../ScheduleDetection',
                     help='Base directory for the model.')
 
 parser.add_argument('--clean_model_dir', action='store_true',
@@ -38,24 +38,24 @@ parser.add_argument('--epochs_per_eval', type=int, default=1,
 parser.add_argument('--tensorboard_images_max_outputs', type=int, default=6,
                     help='Max number of batch elements to generate for Tensorboard.')
 
-parser.add_argument('--batch_size', type=int, default=10,
+parser.add_argument('--batch_size', type=int, default=8,
                     help='Number of examples per batch.')
 
 parser.add_argument('--learning_rate_policy', type=str, default='poly',
                     choices=['poly', 'piecewise'],
                     help='Learning rate policy to optimize loss.')
 
-parser.add_argument('--max_iter', type=int, default=30000,
+parser.add_argument('--max_iter', type=int, default=10000,
                     help='Number of maximum iteration used for "poly" learning rate policy.')
 
-parser.add_argument('--data_dir', type=str, default='./dataset/',
+parser.add_argument('--data_dir', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal/TFRecords',
                     help='Path to the directory containing the PASCAL VOC data tf record.')
 
-parser.add_argument('--base_architecture', type=str, default='resnet_v2_101',
+parser.add_argument('--base_architecture', type=str, default='resnet_v2_50',
                     choices=['resnet_v2_50', 'resnet_v2_101'],
                     help='The architecture of base Resnet building block.')
 
-parser.add_argument('--pre_trained_model', type=str, default='./ini_checkpoints/resnet_v2_101/resnet_v2_101.ckpt',
+parser.add_argument('--pre_trained_model', type=str, default='../TimetableSegmentation/resnet_v2_50/resnet_v2_50.ckpt',
                     help='Path to the pre-trained model checkpoint.')
 
 parser.add_argument('--output_stride', type=int, default=16,
@@ -125,7 +125,7 @@ def parse_record(raw_record):
       'image/encoded':
       tf.FixedLenFeature((), tf.string, default_value=''),
       'image/format':
-      tf.FixedLenFeature((), tf.string, default_value='jpeg'),
+      tf.FixedLenFeature((), tf.string, default_value='png'),
       'label/encoded':
       tf.FixedLenFeature((), tf.string, default_value=''),
       'label/format':

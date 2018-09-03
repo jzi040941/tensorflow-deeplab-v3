@@ -17,7 +17,7 @@ import shutil
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--model_dir', type=str, default='../ScheduleDetection',
+parser.add_argument('--model_dir', type=str, default='../TimetableSegmentation',
                     help='Base directory for the model.')
 
 parser.add_argument('--clean_model_dir', action='store_true',

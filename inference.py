@@ -21,21 +21,21 @@ from tensorflow.python import debug as tf_debug
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--data_dir', type=str, default='dataset/VOCdevkit/VOC2012/JPEGImages',
+parser.add_argument('--data_dir', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal',
                     help='The directory containing the image data.')
 
-parser.add_argument('--output_dir', type=str, default='./dataset/inference_output',
+parser.add_argument('--output_dir', type=str, default='../TimetableSegmentation/predict',
                     help='Path to the directory to generate the inference results')
 
-parser.add_argument('--infer_data_list', type=str, default='./dataset/sample_images_list.txt',
+parser.add_argument('--infer_data_list', type=str, default='../Data_Zoo/TimetableSegmentation_Pascal/ImageSets/Main/train.txt',
                     help='Path to the file listing the inferring images.')
 
-parser.add_argument('--model_dir', type=str, default='./model',
+parser.add_argument('--model_dir', type=str, default='../TimetableSegmentation',
                     help="Base directory for the model. "
                          "Make sure 'model_checkpoint_path' given in 'checkpoint' file matches "
                          "with checkpoint name.")
 
-parser.add_argument('--base_architecture', type=str, default='resnet_v2_101',
+parser.add_argument('--base_architecture', type=str, default='resnet_v2_50',
                     choices=['resnet_v2_50', 'resnet_v2_101'],
                     help='The architecture of base Resnet building block.')
 

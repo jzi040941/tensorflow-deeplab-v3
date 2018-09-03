@@ -71,7 +71,7 @@ def main(unused_argv):
       })
 
   examples = dataset_util.read_examples_list(FLAGS.infer_data_list)
-  image_files = [os.path.join(FLAGS.data_dir, filename) for filename in examples]
+  image_files = [os.path.join(FLAGS.data_dir, filename+'png') for filename in examples]
 
   predictions = model.predict(
         input_fn=lambda: preprocessing.eval_input_fn(image_files),

@@ -89,8 +89,8 @@ def main(unused_argv):
     print("generating:", path_to_output)
     mask = pred_dict['decoded_labels']
     mask = Image.fromarray(mask)
-    plt.axis('off')
-    plt.imshow(mask)
+    #plt.axis('off')
+    #plt.imshow(mask)
     plt.savefig(path_to_output, bbox_inches='tight')
 
 

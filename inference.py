@@ -15,6 +15,8 @@ from utils import preprocessing
 from utils import dataset_util
 
 from PIL import Image
+import matplotlib as mpl
+mpl.use('Agg')
 import matplotlib.pyplot as plt
 
 from tensorflow.python import debug as tf_debug

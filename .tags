@@ -16,14 +16,14 @@ _MIN_SCALE	train.py	/^_MIN_SCALE = 0.5$/;"	v	line:87
 _MOMENTUM	train.py	/^_MOMENTUM = 0.9$/;"	v	line:92
 _NUM_CLASSES	evaluate.py	/^_NUM_CLASSES = 21$/;"	v	line:44
 _NUM_CLASSES	export_inference_graph.py	/^_NUM_CLASSES = 21$/;"	v	line:36
-_NUM_CLASSES	inference.py	/^_NUM_CLASSES = 21$/;"	v	line:49
-_NUM_CLASSES	train.py	/^_NUM_CLASSES = 21$/;"	v	line:83
+_NUM_CLASSES	inference.py	/^_NUM_CLASSES = 4$/;"	v	line:49
+_NUM_CLASSES	train.py	/^_NUM_CLASSES = 4$/;"	v	line:83
 _NUM_IMAGES	train.py	/^_NUM_IMAGES = {$/;"	v	line:96
 _POWER	train.py	/^_POWER = 0.9$/;"	v	line:91
 _R_MEAN	utils/preprocessing.py	/^_R_MEAN = 123.68$/;"	v	line:7
 _WEIGHT_DECAY	deeplab_model.py	/^_WEIGHT_DECAY = 5e-4$/;"	v	line:18
 _WIDTH	train.py	/^_WIDTH = 513$/;"	v	line:85
-_parse_function	utils/preprocessing.py	/^  def _parse_function(filename, is_label):$/;"	f	line:226	function:eval_input_fn
+_parse_function	utils/preprocessing.py	/^  def _parse_function(filename, is_label):$/;"	f	line:220	function:eval_input_fn
 atrous_spatial_pyramid_pooling	deeplab_model.py	/^def atrous_spatial_pyramid_pooling(inputs, output_stride, batch_norm_decay, is_training, depth=256):$/;"	f	line:21
 bytes_feature	utils/dataset_util.py	/^def bytes_feature(value):$/;"	f	line:31
 bytes_list_feature	utils/dataset_util.py	/^def bytes_list_feature(value):$/;"	f	line:35
@@ -40,11 +40,11 @@ compute_accuracy	evaluate.py	/^    def compute_accuracy(total_cm):$/;"	f	line:12
 compute_mean_iou	deeplab_model.py	/^  def compute_mean_iou(total_cm, name='mean_iou'):$/;"	f	line:274	function:deeplabv3_model_fn
 compute_mean_iou	evaluate.py	/^    def compute_mean_iou(total_cm):$/;"	f	line:93	function:main
 create_tf_record	create_pascal_tf_record.py	/^def create_tf_record(output_filename,$/;"	f	line:84
-decode_labels	utils/preprocessing.py	/^def decode_labels(mask, num_images=1, num_classes=21):$/;"	f	line:23
+decode_labels	utils/preprocessing.py	/^def decode_labels(mask, num_images=1, num_classes=21):$/;"	f	line:17
 deeplab_v3_generator	deeplab_model.py	/^def deeplab_v3_generator(num_classes,$/;"	f	line:69
 deeplabv3_model_fn	deeplab_model.py	/^def deeplabv3_model_fn(features, labels, mode, params):$/;"	f	line:144
 dict_to_tf_example	create_pascal_tf_record.py	/^def dict_to_tf_example(image_path,$/;"	f	line:38
-eval_input_fn	utils/preprocessing.py	/^def eval_input_fn(image_filenames, label_filenames=None, batch_size=1):$/;"	f	line:213
+eval_input_fn	utils/preprocessing.py	/^def eval_input_fn(image_filenames, label_filenames=None, batch_size=1):$/;"	f	line:207
 float_list_feature	utils/dataset_util.py	/^def float_list_feature(value):$/;"	f	line:39
 get_filenames	train.py	/^def get_filenames(is_training, data_dir):$/;"	f	line:102
 help	create_pascal_tf_record.py	/^                    help='Path to the directory containing the PASCAL VOC data.')$/;"	v	line:20
@@ -98,8 +98,8 @@ main	export_inference_graph.py	/^def main(unused_argv):$/;"	f	line:39
 main	inference.py	/^def main(unused_argv):$/;"	f	line:52
 main	train.py	/^def main(unused_argv):$/;"	f	line:213
 make_initializable_iterator	utils/dataset_util.py	/^def make_initializable_iterator(dataset):$/;"	f	line:91
-mean_image_addition	utils/preprocessing.py	/^def mean_image_addition(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:49
-mean_image_subtraction	utils/preprocessing.py	/^def mean_image_subtraction(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:82
+mean_image_addition	utils/preprocessing.py	/^def mean_image_addition(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:43
+mean_image_subtraction	utils/preprocessing.py	/^def mean_image_subtraction(image, means=(_R_MEAN, _G_MEAN, _B_MEAN)):$/;"	f	line:76
 model	deeplab_model.py	/^  def model(inputs, is_training):$/;"	f	line:109	function:deeplab_v3_generator
 parse_record	train.py	/^def parse_record(raw_record):$/;"	f	line:118
 parser	create_pascal_tf_record.py	/^parser = argparse.ArgumentParser()$/;"	v	line:17
@@ -108,9 +108,9 @@ parser	export_inference_graph.py	/^parser = argparse.ArgumentParser()$/;"	v	line
 parser	inference.py	/^parser = argparse.ArgumentParser()$/;"	v	line:22
 parser	train.py	/^parser = argparse.ArgumentParser()$/;"	v	line:18
 preprocess_image	train.py	/^def preprocess_image(image, label, is_training):$/;"	f	line:153
-random_crop_or_pad_image_and_label	utils/preprocessing.py	/^def random_crop_or_pad_image_and_label(image, label, crop_height, crop_width, ignore_label):$/;"	f	line:156
-random_flip_left_right_image_and_label	utils/preprocessing.py	/^def random_flip_left_right_image_and_label(image, label):$/;"	f	line:194
-random_rescale_image_and_label	utils/preprocessing.py	/^def random_rescale_image_and_label(image, label, min_scale, max_scale):$/;"	f	line:115
+random_crop_or_pad_image_and_label	utils/preprocessing.py	/^def random_crop_or_pad_image_and_label(image, label, crop_height, crop_width, ignore_label):$/;"	f	line:150
+random_flip_left_right_image_and_label	utils/preprocessing.py	/^def random_flip_left_right_image_and_label(image, label):$/;"	f	line:188
+random_rescale_image_and_label	utils/preprocessing.py	/^def random_rescale_image_and_label(image, label, min_scale, max_scale):$/;"	f	line:109
 read_dataset	utils/dataset_util.py	/^def read_dataset($/;"	f	line:108
 read_examples_list	utils/dataset_util.py	/^def read_examples_list(path):$/;"	f	line:43
 recursive_parse_xml_to_dict	utils/dataset_util.py	/^def recursive_parse_xml_to_dict(xml):$/;"	f	line:65

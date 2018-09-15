@@ -86,7 +86,7 @@ _WIDTH = 250
 _DEPTH = 3
 _MIN_SCALE = 0.5
 _MAX_SCALE = 2.0
-_IGNORE_LABEL = 255
+_IGNORE_LABEL = 0
 
 _POWER = 0.9
 _MOMENTUM = 0.9
@@ -152,7 +152,10 @@ def parse_record(raw_record):
 
 def preprocess_image(image, label, is_training):
   """Preprocess a single image of layout [height, width, depth]."""
+  
   if is_training:
+	
+	'''
     # Randomly scale the image and label.
     image, label = preprocessing.random_rescale_image_and_label(
         image, label, _MIN_SCALE, _MAX_SCALE)
@@ -164,6 +167,7 @@ def preprocess_image(image, label, is_training):
     # Randomly flip the image and label horizontally.
     image, label = preprocessing.random_flip_left_right_image_and_label(
         image, label)
+	'''
 
     image.set_shape([_HEIGHT, _WIDTH, 3])
     label.set_shape([_HEIGHT, _WIDTH, 1])
@@ -195,12 +199,9 @@ def input_fn(is_training, data_dir, batch_size, num_epochs=1):
     dataset = dataset.shuffle(buffer_size=_NUM_IMAGES['train'])
 
   dataset = dataset.map(parse_record)
-
-  #turn off preprocessing
-  '''
+  
   dataset = dataset.map(
       lambda image, label: preprocess_image(image, label, is_training))
-  '''
   dataset = dataset.prefetch(batch_size)
 
   # We call repeat after shuffling, rather than before, to prevent separate

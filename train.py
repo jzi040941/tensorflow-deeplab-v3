@@ -195,8 +195,12 @@ def input_fn(is_training, data_dir, batch_size, num_epochs=1):
     dataset = dataset.shuffle(buffer_size=_NUM_IMAGES['train'])
 
   dataset = dataset.map(parse_record)
+
+  #turn off preprocessing
+  '''
   dataset = dataset.map(
       lambda image, label: preprocess_image(image, label, is_training))
+  '''
   dataset = dataset.prefetch(batch_size)
 
   # We call repeat after shuffling, rather than before, to prevent separate
